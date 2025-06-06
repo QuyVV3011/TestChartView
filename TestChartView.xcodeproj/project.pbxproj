@@ -6,6 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		80B922CE7D412F589810BADE /* Pods_TestChartView_TestChartViewUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A0F5DFF2AFDFECED1A088D /* Pods_TestChartView_TestChartViewUITests.framework */; };
+		83C377412054385909E2C950 /* Pods_TestChartViewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A22D50AA4BE118E1E2C08AD6 /* Pods_TestChartViewTests.framework */; };
+		84392D1A2DF2FFD700AE873D /* SwiftUIPager in Frameworks */ = {isa = PBXBuildFile; productRef = 84392D192DF2FFD700AE873D /* SwiftUIPager */; };
+		BAF046FBFE12BC60584134D9 /* Pods_TestChartView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 029108F30A3AC9A240C021BE /* Pods_TestChartView.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		84AC535B2DE7F301004A28D3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,14 +31,52 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		029108F30A3AC9A240C021BE /* Pods_TestChartView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestChartView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		13D00C3D4313344B847424B1 /* Pods-TestChartViewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestChartViewTests.debug.xcconfig"; path = "Target Support Files/Pods-TestChartViewTests/Pods-TestChartViewTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2B6380D3B1BB459A73F2640B /* Pods-TestChartView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestChartView.release.xcconfig"; path = "Target Support Files/Pods-TestChartView/Pods-TestChartView.release.xcconfig"; sourceTree = "<group>"; };
+		77A0F5DFF2AFDFECED1A088D /* Pods_TestChartView_TestChartViewUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestChartView_TestChartViewUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84AC534C2DE7F300004A28D3 /* TestChartView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestChartView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84AC535A2DE7F301004A28D3 /* TestChartViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestChartViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84AC53642DE7F301004A28D3 /* TestChartViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestChartViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		96F2C8A630F5A688F47B6BF1 /* Pods-TestChartView-TestChartViewUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestChartView-TestChartViewUITests.release.xcconfig"; path = "Target Support Files/Pods-TestChartView-TestChartViewUITests/Pods-TestChartView-TestChartViewUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9B8CFA798C9AB38F3BAEEA7D /* Pods-TestChartView-TestChartViewUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestChartView-TestChartViewUITests.debug.xcconfig"; path = "Target Support Files/Pods-TestChartView-TestChartViewUITests/Pods-TestChartView-TestChartViewUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9D9C1FEEAE42A0511C7A2244 /* Pods-TestChartViewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestChartViewTests.release.xcconfig"; path = "Target Support Files/Pods-TestChartViewTests/Pods-TestChartViewTests.release.xcconfig"; sourceTree = "<group>"; };
+		A22D50AA4BE118E1E2C08AD6 /* Pods_TestChartViewTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestChartViewTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5FB060184A078DFBFFEEEFF /* Pods-TestChartView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestChartView.debug.xcconfig"; path = "Target Support Files/Pods-TestChartView/Pods-TestChartView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		8496615B2DEDAF7400A2150D /* Exceptions for "TestChartView" folder in "TestChartViewTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"GoogleService-Info.plist",
+			);
+			target = 84AC53592DE7F301004A28D3 /* TestChartViewTests */;
+		};
+		8496615C2DEDAF7400A2150D /* Exceptions for "TestChartView" folder in "TestChartViewUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"GoogleService-Info.plist",
+			);
+			target = 84AC53632DE7F301004A28D3 /* TestChartViewUITests */;
+		};
+		8496615E2DEDB0E500A2150D /* Exceptions for "TestChartView" folder in "TestChartView" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 84AC534B2DE7F300004A28D3 /* TestChartView */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		84AC534E2DE7F300004A28D3 /* TestChartView */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				8496615E2DEDB0E500A2150D /* Exceptions for "TestChartView" folder in "TestChartView" target */,
+				8496615B2DEDAF7400A2150D /* Exceptions for "TestChartView" folder in "TestChartViewTests" target */,
+				8496615C2DEDAF7400A2150D /* Exceptions for "TestChartView" folder in "TestChartViewUITests" target */,
+			);
 			path = TestChartView;
 			sourceTree = "<group>";
 		};
@@ -52,6 +97,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84392D1A2DF2FFD700AE873D /* SwiftUIPager in Frameworks */,
+				BAF046FBFE12BC60584134D9 /* Pods_TestChartView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83C377412054385909E2C950 /* Pods_TestChartViewTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,12 +114,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80B922CE7D412F589810BADE /* Pods_TestChartView_TestChartViewUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30DD54C4AF90FE3477044964 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C5FB060184A078DFBFFEEEFF /* Pods-TestChartView.debug.xcconfig */,
+				2B6380D3B1BB459A73F2640B /* Pods-TestChartView.release.xcconfig */,
+				9B8CFA798C9AB38F3BAEEA7D /* Pods-TestChartView-TestChartViewUITests.debug.xcconfig */,
+				96F2C8A630F5A688F47B6BF1 /* Pods-TestChartView-TestChartViewUITests.release.xcconfig */,
+				13D00C3D4313344B847424B1 /* Pods-TestChartViewTests.debug.xcconfig */,
+				9D9C1FEEAE42A0511C7A2244 /* Pods-TestChartViewTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		47DCD140D776200BC9BFF941 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				029108F30A3AC9A240C021BE /* Pods_TestChartView.framework */,
+				77A0F5DFF2AFDFECED1A088D /* Pods_TestChartView_TestChartViewUITests.framework */,
+				A22D50AA4BE118E1E2C08AD6 /* Pods_TestChartViewTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		84AC53432DE7F300004A28D3 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +151,8 @@
 				84AC535D2DE7F301004A28D3 /* TestChartViewTests */,
 				84AC53672DE7F301004A28D3 /* TestChartViewUITests */,
 				84AC534D2DE7F300004A28D3 /* Products */,
+				30DD54C4AF90FE3477044964 /* Pods */,
+				47DCD140D776200BC9BFF941 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,9 +173,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84AC536E2DE7F302004A28D3 /* Build configuration list for PBXNativeTarget "TestChartView" */;
 			buildPhases = (
+				3F5A17F1A109D244CAEC6E0D /* [CP] Check Pods Manifest.lock */,
 				84AC53482DE7F300004A28D3 /* Sources */,
 				84AC53492DE7F300004A28D3 /* Frameworks */,
 				84AC534A2DE7F300004A28D3 /* Resources */,
+				A22F6C31504B5C7F35412131 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -111,8 +187,6 @@
 				84AC534E2DE7F300004A28D3 /* TestChartView */,
 			);
 			name = TestChartView;
-			packageProductDependencies = (
-			);
 			productName = TestChartView;
 			productReference = 84AC534C2DE7F300004A28D3 /* TestChartView.app */;
 			productType = "com.apple.product-type.application";
@@ -121,6 +195,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84AC53712DE7F302004A28D3 /* Build configuration list for PBXNativeTarget "TestChartViewTests" */;
 			buildPhases = (
+				B9BDDD894D0E37F8B3660F3F /* [CP] Check Pods Manifest.lock */,
 				84AC53562DE7F301004A28D3 /* Sources */,
 				84AC53572DE7F301004A28D3 /* Frameworks */,
 				84AC53582DE7F301004A28D3 /* Resources */,
@@ -134,8 +209,6 @@
 				84AC535D2DE7F301004A28D3 /* TestChartViewTests */,
 			);
 			name = TestChartViewTests;
-			packageProductDependencies = (
-			);
 			productName = TestChartViewTests;
 			productReference = 84AC535A2DE7F301004A28D3 /* TestChartViewTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -144,9 +217,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84AC53742DE7F302004A28D3 /* Build configuration list for PBXNativeTarget "TestChartViewUITests" */;
 			buildPhases = (
+				BD6E433EB191AD5900737E30 /* [CP] Check Pods Manifest.lock */,
 				84AC53602DE7F301004A28D3 /* Sources */,
 				84AC53612DE7F301004A28D3 /* Frameworks */,
 				84AC53622DE7F301004A28D3 /* Resources */,
+				E9371A900AE89FD5069CEA3A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -157,8 +232,6 @@
 				84AC53672DE7F301004A28D3 /* TestChartViewUITests */,
 			);
 			name = TestChartViewUITests;
-			packageProductDependencies = (
-			);
 			productName = TestChartViewUITests;
 			productReference = 84AC53642DE7F301004A28D3 /* TestChartViewUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -195,6 +268,9 @@
 			);
 			mainGroup = 84AC53432DE7F300004A28D3;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				84392D182DF2FFD700AE873D /* XCRemoteSwiftPackageReference "SwiftUIPager" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 84AC534D2DE7F300004A28D3 /* Products */;
 			projectDirPath = "";
@@ -230,6 +306,117 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3F5A17F1A109D244CAEC6E0D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestChartView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A22F6C31504B5C7F35412131 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestChartView/Pods-TestChartView-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestChartView/Pods-TestChartView-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestChartView/Pods-TestChartView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9BDDD894D0E37F8B3660F3F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestChartViewTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD6E433EB191AD5900737E30 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestChartView-TestChartViewUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9371A900AE89FD5069CEA3A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestChartView-TestChartViewUITests/Pods-TestChartView-TestChartViewUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestChartView-TestChartViewUITests/Pods-TestChartView-TestChartViewUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestChartView-TestChartViewUITests/Pods-TestChartView-TestChartViewUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		84AC53482DE7F300004A28D3 /* Sources */ = {
@@ -306,7 +493,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -367,7 +554,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -385,14 +572,18 @@
 		};
 		84AC536F2DE7F302004A28D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5FB060184A078DFBFFEEEFF /* Pods-TestChartView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = TestChartView/TestChartView.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U4KFN2937G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TestChartView/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -412,24 +603,29 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = 1;
 				XROS_DEPLOYMENT_TARGET = 2.4;
 			};
 			name = Debug;
 		};
 		84AC53702DE7F302004A28D3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B6380D3B1BB459A73F2640B /* Pods-TestChartView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = TestChartView/TestChartView.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U4KFN2937G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TestChartView/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -449,16 +645,18 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = 1;
 				XROS_DEPLOYMENT_TARGET = 2.4;
 			};
 			name = Release;
 		};
 		84AC53722DE7F302004A28D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13D00C3D4313344B847424B1 /* Pods-TestChartViewTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -481,6 +679,7 @@
 		};
 		84AC53732DE7F302004A28D3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D9C1FEEAE42A0511C7A2244 /* Pods-TestChartViewTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -503,6 +702,7 @@
 		};
 		84AC53752DE7F302004A28D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B8CFA798C9AB38F3BAEEA7D /* Pods-TestChartView-TestChartViewUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -524,6 +724,7 @@
 		};
 		84AC53762DE7F302004A28D3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96F2C8A630F5A688F47B6BF1 /* Pods-TestChartView-TestChartViewUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -583,6 +784,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		84392D182DF2FFD700AE873D /* XCRemoteSwiftPackageReference "SwiftUIPager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/fermoya/SwiftUIPager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		84392D192DF2FFD700AE873D /* SwiftUIPager */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84392D182DF2FFD700AE873D /* XCRemoteSwiftPackageReference "SwiftUIPager" */;
+			productName = SwiftUIPager;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 84AC53442DE7F300004A28D3 /* Project object */;
 }

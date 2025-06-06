@@ -1,0 +1,6 @@
+framework module Pods_TestChartView_TestChartViewUITests {
+  umbrella header "Pods-TestChartView-TestChartViewUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
