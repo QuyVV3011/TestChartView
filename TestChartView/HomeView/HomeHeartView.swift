@@ -61,7 +61,7 @@ extension HomeHeartView {
                         page.update(.new(index: 0))
                     }) {
                         HStack(spacing: 6) {
-                            Image(.icHeart)
+                            Image(selectedIndex == 0 ? .icHeart : .icHeartNo)
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 20, height: 20)
@@ -78,7 +78,7 @@ extension HomeHeartView {
                         page.update(.new(index: 1))
                     }) {
                         HStack(spacing: 6) {
-                            Image(.icHeartAge)
+                            Image(selectedIndex == 1 ? .icHeartAge : .icHeartAgeNo)
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 20, height: 20)

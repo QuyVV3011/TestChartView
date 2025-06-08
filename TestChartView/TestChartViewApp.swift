@@ -58,7 +58,7 @@ struct TestChartViewApp: App {
 //                    }
 //            }
 //            HeartRateResultView()
-            HomeView()
+            HomeView().ignoresSafeArea()
         }
     }
 }
