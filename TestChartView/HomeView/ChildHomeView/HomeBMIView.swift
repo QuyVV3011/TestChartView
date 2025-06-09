@@ -1,6 +1,5 @@
 import SwiftUI
 
-
 struct HomeBMIView: View {
     
     @State var currentTime: String = ""

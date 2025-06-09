@@ -54,7 +54,7 @@ struct SDNNHeartRateResultView: View {
             .padding(.top, 24)
             .padding(.leading, 12)
             
-            CustomSliderView(valueCurrent: $valueSDNN, valueListLevel: valueListLevel, valueListColor: valueListColor, valueListString: valueListString)
+            CustomSliderView(valueCurrent: $valueSDNN, valueListLevel: valueListLevel, valueListColor: valueListColor, valueListString: valueListString, showIncrease: .constant(true))
             
             Spacer().frame(height: 35)
             Text("Low stress brings numerous benefits to both your body and mind, helping you feel relaxed, reducing anxiety, and improving sleep quality. It enhances your focus, decision-making skills, and memory. Physically, low stress reduces muscle tension, stabilizes blood pressure, supports heart health, and boosts your immune system. As a result, you'll feel healthier,more energetic, and enjoy a better quality of life.")

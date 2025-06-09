@@ -19,16 +19,15 @@ struct HomeHeartView: View {
                 switch index {
                 case 0:
                     HomeHeartRateView()
-                        .padding(.top, 16)
+                        .padding(.top, 4)
                 case 1:
                     HomeHeartAgeView()
-                        .padding(.top, 16)
+                        .padding(.top, 4)
                 default:
                     EmptyView()
                 }
             }
             .allowsDragging(false)
-            .interactive(scale: 0.95)
             .animation(.easeInOut, value: page.index)
             
         }

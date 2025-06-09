@@ -34,7 +34,8 @@ struct GraphView3: View {
         GeometryReader { geo in
             HStack {
                 ZStack {
-                    GridLines().frame(height: 104)
+                    GridLines()
+                        .frame(height: 104)
                     
                     ScrollCusomView(trigger: $scroll, offset: $offset){
                         ZStack {

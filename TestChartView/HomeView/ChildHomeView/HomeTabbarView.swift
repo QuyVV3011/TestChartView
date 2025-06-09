@@ -5,7 +5,7 @@ struct HomeTabbarView: View {
     var body: some View {
         VStack {
             Spacer()
-            CustomTabbarView()
+            CustomTabbarView().shadow(radius: 4)
                 .overlay(content: {
                     HStack {
                         VStack {
@@ -43,12 +43,11 @@ struct HomeTabbarView: View {
                                     
                                 }
                         }
-                        
-                        
                         Spacer()
                         
                         VStack {
-                            Image(.icWrite).renderingMode(.template)
+                            Image(.icWrite)
+                                .renderingMode(.template)
                                 .resizable()
                                 .scaledToFit()
                                 .foregroundStyle(selectedHome == 1 ? Color(hex: "F36084") : Color(hex: "243044"))
@@ -70,3 +69,4 @@ struct HomeTabbarView: View {
         .ignoresSafeArea()
     }
 }
+

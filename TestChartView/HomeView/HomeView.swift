@@ -1,13 +1,15 @@
 import SwiftUI
 
+public typealias VoidBlock = () -> Void
 struct HomeView: View {
     
     @State var selectedIndex: Int = 0
     @State var selectedHome: Int = 0
-    
+    @State var showDetails: Bool = false
     var body: some View {
         ZStack {
-            Color(hex: "F2F6FF").ignoresSafeArea()
+            Color(hex: "F2F6FF")
+                .ignoresSafeArea()
             
             VStack {
                 Spacer()
@@ -36,9 +38,11 @@ struct HomeView: View {
                         
                         HomeHeartView(selectedIndex: $selectedIndex)
                             .frame(height: 407)
+                            .padding(.top, 20)
                         
-                        HomeLastMeasuredView()
-                            .padding(.top, 16)
+                        HomeLastMeasuredView(showDetail: {
+                            showDetails = true
+                        }).padding(.top, 16)
                         
                         HomeBloodPressureView()
                             .padding(.top, 16)
@@ -59,9 +63,13 @@ struct HomeView: View {
                             .frame(height: 110)
                     }
                 }
-               
+                
                 Spacer()
                 
+            }
+            .sheet(isPresented: $showDetails) {
+                DetailtView(showDetail: $showDetails)
+                    .presentationDragIndicator(.visible)
             }
             
             HomeTabbarView(selectedHome: $selectedHome)

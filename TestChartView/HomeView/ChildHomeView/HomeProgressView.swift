@@ -40,6 +40,7 @@ struct HomeProgressView: View {
                                 Spacer()
                                 
                                 CircularProgressView(progress: 0.4, label: progressList[index].lableText, valueText: progressList[index].valueProgess,valueType: progressList[index].typeValue, color: progressList[index].colorProgess)
+                                    .padding(.bottom, 12)
                             }
                         }
                 }
@@ -50,7 +51,7 @@ struct HomeProgressView: View {
 }
 
 #Preview {
-    HomeProgressView()
+    HomeProgressView().preferredColorScheme(.dark)
 }
 
 struct ProgressModel: Identifiable {

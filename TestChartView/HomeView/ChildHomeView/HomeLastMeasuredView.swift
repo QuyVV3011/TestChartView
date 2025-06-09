@@ -1,10 +1,16 @@
 import SwiftUI
 
 struct HomeLastMeasuredView: View {
+    
+    var showDetail: VoidBlock?
+    
     var body: some View {
         VStack {
             HStack {
-                Text("Last measured").font(.system(size: 16, weight: .medium)).foregroundStyle(Color(hex: "28303F")).padding(.horizontal, 20)
+                Text("Last measured")
+                    .font(.system(size: 16, weight: .medium))
+                    .foregroundStyle(Color(hex: "28303F"))
+                    .padding(.horizontal, 20)
                 Spacer()
             }
             
@@ -23,17 +29,22 @@ struct HomeLastMeasuredView: View {
                                     .font(.system(size: 18, weight: .medium))
                                     .foregroundStyle(Color(hex: "152238"))
                                 Spacer()
-                                
-                                Image(.icArrowRight)
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 20, height: 20)
+                                Button {
+                                    showDetail?()
+                                } label: {
+                                    
+                                    Image(.icArrowRight)
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 20, height: 20)
+                                }
                             }
                             .padding(.top, 12)
                             .padding(.horizontal, 12)
                             Spacer()
                             
                             CircularProgressView(progress: 0.2, label: "Good", valueText: 128, valueType: "ms", color: Color(hex: "30C7A3"))
+                                .padding(.bottom, 12)
                         }
                     }
                 
@@ -64,6 +75,7 @@ struct HomeLastMeasuredView: View {
                             Spacer()
                             
                             CircularProgressView(progress: 0.4, label: "High", valueText: 128, valueType: "ms", color: Color(hex: "F7586F"))
+                                .padding(.bottom, 12)
                         }
                     }
             }

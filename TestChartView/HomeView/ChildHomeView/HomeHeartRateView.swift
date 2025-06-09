@@ -7,13 +7,17 @@ struct HomeHeartRateView: View {
     @State var pulseValue: Int = 75
     @State var heartScoreValue: Int = 75
     @State var numberMeasurementToday: Int = 3
-    let calendar = Calendar.current
     @State var days: [[DayItem]] = []
+    
+    let calendar = Calendar.current
+    
     var body: some View {
         GeometryReader { geo in
             VStack(alignment: .leading) {
                 HStack {
                     Text("Today at \(currentTime)")
+                        .font(.system(size: 12, weight: .regular))
+                        .foregroundStyle(Color(hex: "#28303F"))
                     Spacer()
                 }.padding(.horizontal, 12)
                 
@@ -32,6 +36,7 @@ struct HomeHeartRateView: View {
                             
                         }
                     }
+                    
                     Spacer()
                         .frame(width: 16)
                     
@@ -61,10 +66,23 @@ struct HomeHeartRateView: View {
                 
                 GraphView()
                 
-                Text("Measurement today : \(numberMeasurementToday)")
-                    .font(.system(size: 16, weight: .medium))
-                    .foregroundStyle(Color(hex: "28303F"))
-                    .padding(.leading, 12)
+                HStack {
+                    Text("Measurement today : \(numberMeasurementToday)")
+                        .font(.system(size: 16, weight: .medium))
+                        .foregroundStyle(Color(hex: "28303F"))
+                        .padding(.leading, 12)
+                    
+                    Spacer()
+                    
+                    Text("History").font(.system(size: 12, weight: .regular))
+                        .frame(width: 64, height: 24)
+                        .background(Color(hex: "F2F6FF"))
+                        .clipShape(
+                            RoundedRectangle(cornerRadius: 8)
+                        )
+                        .padding(.trailing, 12)
+                }
+                
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
@@ -185,7 +203,6 @@ struct HomeHeartRateView: View {
         // Nhóm thành tuần
         for chunk in stride(from: 0, to: days.count, by: 7) {
             let week = Array(days[chunk..<min(chunk+7, days.count)])
-            print("week: \(week)")
             result.append(week)
         }
         

@@ -46,6 +46,7 @@ struct HeartRateResultView: View {
                 
                 
             }
+            
             .padding(.horizontal, 20)
         }
         .ignoresSafeArea()

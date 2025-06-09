@@ -6,6 +6,7 @@ struct CustomSliderView: View {
     @State var valueListLevel: [Double] = [0, 12, 24, 37, 86, 231, 520]
     @State var valueListColor: [String] = ["72D59E", "FABA23", "8DE577", "72D59E", "FFD77A", "F7586F"]
     @State var valueListString: [String] = ["Low", "Normal", "BelowAverage", "Average", "AboeAverage", "High"]
+    @Binding var showIncrease: Bool
     
     var body: some View {
         VStack(spacing: 8) {
@@ -55,12 +56,15 @@ struct CustomSliderView: View {
                     HStack(spacing: 8) {
                         Text(currentLevel)
                             .font(.system(size: 16, weight: .medium))
-                        Label("-11", systemImage: "arrow.down")
-                            .foregroundColor(Color(hex: "72D59E"))
-                            .font(.system(size: 12, weight: .medium))
-                            .padding(4)
-                            .background(Color(hex: "72D59E").opacity(0.15))
-                            .cornerRadius(12)
+                        if showIncrease {
+                            Label("-11", systemImage: "arrow.down")
+                                .foregroundColor(Color(hex: "72D59E"))
+                                .font(.system(size: 12, weight: .medium))
+                                .padding(4)
+                                .background(Color(hex: "72D59E").opacity(0.15))
+                                .cornerRadius(12)
+                        }
+                        
                     }
                 }
                 .background(
@@ -78,7 +82,6 @@ struct CustomSliderView: View {
                 .animation(.easeOut(duration: 1.5), value: valueCurrent)
             }
         }
-        .padding()
     }
     
     private var currentColor: Color {
@@ -118,5 +121,5 @@ struct CustomSliderView: View {
 }
 
 #Preview {
-    CustomSliderView(valueCurrent: .constant(70))
+    CustomSliderView(valueCurrent: .constant(70), showIncrease: .constant(false))
 }

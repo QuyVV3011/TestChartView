@@ -28,8 +28,8 @@ struct GraphView: View {
     @State var offset: CGFloat = 0
    
     
-    let minY: CGFloat = 0
-    let maxY: CGFloat = 104
+    @State var minY: CGFloat = 0
+    @State var maxY: CGFloat = 104
     
     var body: some View {
         GeometryReader { geo in
@@ -81,6 +81,18 @@ struct GraphView: View {
             .background(Color.white)
             .onAppear {
                 screenWidth = geo.size.width - 30
+                if !points.isEmpty && points.count < 2  {
+                    if points[0].y != 0 {
+                        minY = points[0].y / 2
+                        minY = points[0].y * 2
+                    } else if points[1].y == 0 {
+                        minY = points[0].y
+                        minY = 100
+                    }
+                } else if !points.isEmpty && points.count > 1 {
+                    maxY = points.map({ $0.y }).max()!
+                    minY = points.map({ $0.y }).min()!
+                }
             }
         }.frame(height: 120)
         

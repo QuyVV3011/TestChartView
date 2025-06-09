@@ -60,7 +60,7 @@ struct StressHeartRateResultView: View {
             .padding(.top, 24)
             .padding(.leading, 12)
             
-            CustomSliderView(valueCurrent: $valueStress,valueListLevel: valueListLevel, valueListColor: valueListColor, valueListString: valueListString)
+            CustomSliderView(valueCurrent: $valueStress,valueListLevel: valueListLevel, valueListColor: valueListColor, valueListString: valueListString, showIncrease: .constant(true))
             
             Spacer()
                 .frame(height: 35)

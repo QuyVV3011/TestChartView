@@ -8,9 +8,11 @@ struct HomeHeartAgeView: View {
     
     var body: some View {
         GeometryReader { geo in
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading,spacing: 0) {
                 HStack {
                     Text("Today at \(currentTime)")
+                        .font(.system(size: 12, weight: .regular))
+                        .foregroundStyle(Color(hex: "#28303F"))
                     Spacer()
                 }.padding(.horizontal, 12)
                 
@@ -47,18 +49,23 @@ struct HomeHeartAgeView: View {
                     }
                 }
                 .padding(.horizontal, 12)
+                .padding(.top, 12)
                 
                 GraphView()
+                    .padding(.top, 12)
+                
                 
                 HStack {
                     Text("Your Age")
                         .font(.system(size: 12, weight: .regular))
                         .foregroundStyle(Color(hex: "243044"))
-                        .frame(width: 185, height: 36)
+                        .frame(width: (geo.size.width - 36) / 2, height: 36)
                         .background(Color(hex: "EBEFF8"))
                         .clipShape(
                             RoundedRectangle(cornerRadius: 12)
                         )
+                    
+                    Spacer()
                     
                     HStack {
                         Circle()
@@ -68,12 +75,15 @@ struct HomeHeartAgeView: View {
                             .font(.system(size: 12, weight: .regular))
                             .foregroundStyle(Color(hex: "243044"))
                     }
-                    .frame(width: 185, height: 36)
+                    .frame(width: (geo.size.width - 36) / 2, height: 36)
                     .background(Color(hex: "EBEFF8"))
                     .clipShape(
                         RoundedRectangle(cornerRadius: 12)
                     )
-                }.padding(.horizontal, 12)
+                }
+                .padding(.horizontal, 12)
+                .padding(.top, 12)
+                
                 ZStack {
                     HStack {
                         Image(.icStar)
@@ -95,7 +105,9 @@ struct HomeHeartAgeView: View {
                         Spacer()
                         Circle().fill(LinearGradient(colors: [Color(hex: "F07B8C"), Color(hex: "EA475E")], startPoint: .top, endPoint: .bottom)).frame(height: 40).padding(.trailing, 16)
                     }
-                }      .padding(.horizontal, 12)
+                }
+                .padding(.horizontal, 12)
+                .padding(.top, 16)
                
             }.onAppear {
                 updateTime()
