@@ -46,8 +46,8 @@ struct GraphView2: View {
     @State var scroll: SmoothScrollableTrigger = .none
     @State var offset: CGFloat = 0
     
-    let minY: CGFloat = 0
-    let maxY: CGFloat = 104
+    @State var minY: CGFloat = 0
+    @State var maxY: CGFloat = 104
     
     var body: some View {
         GeometryReader { geo in
@@ -97,13 +97,40 @@ struct GraphView2: View {
             }
             .frame(width: geo.size.width, height: 120)
             .background(Color.white)
+            
             .onAppear {
                 screenWidth = geo.size.width - 30
+                updateMinMaxY()
             }
         }.frame(height: 120)
         
     }
     
+    func updateMinMaxY() {
+        if !points.isEmpty && points.count < 2  {
+            if points[0].y != 0 {
+                minY = points[0].y / 2
+                maxY = points[0].y * 2
+            } else if points[1].y == 0 {
+                minY = points[0].y
+                maxY = 100
+            }
+        } else if !points.isEmpty && points.count > 1 {
+            let yValues = points.map { $0.y }
+            if let min = yValues.min(), let max = yValues.max() {
+                if max == min {
+                    minY = min
+                    maxY = min * 2
+                } else {
+                    minY = min
+                    maxY = max
+                }
+            } else {
+                minY = 0
+                maxY = 100
+            }
+        }
+    }
 }
 
 extension GraphView2 {

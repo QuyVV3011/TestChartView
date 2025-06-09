@@ -26,7 +26,7 @@ struct GraphView: View {
     @State var screenWidth: CGFloat = 0
     @State var scroll: SmoothScrollableTrigger = .none
     @State var offset: CGFloat = 0
-   
+    
     
     @State var minY: CGFloat = 0
     @State var maxY: CGFloat = 104
@@ -79,23 +79,41 @@ struct GraphView: View {
             }
             .frame(width: geo.size.width, height: 120)
             .background(Color.white)
+            .onChange(of: points, {
+                updateMinMaxY()
+            })
             .onAppear {
                 screenWidth = geo.size.width - 30
-                if !points.isEmpty && points.count < 2  {
-                    if points[0].y != 0 {
-                        minY = points[0].y / 2
-                        minY = points[0].y * 2
-                    } else if points[1].y == 0 {
-                        minY = points[0].y
-                        minY = 100
-                    }
-                } else if !points.isEmpty && points.count > 1 {
-                    maxY = points.map({ $0.y }).max()!
-                    minY = points.map({ $0.y }).min()!
-                }
+                updateMinMaxY()
             }
         }.frame(height: 120)
         
+    }
+    
+    func updateMinMaxY() {
+        if !points.isEmpty && points.count < 2  {
+            if points[0].y != 0 {
+                minY = points[0].y / 2
+                maxY = points[0].y * 2
+            } else if points[1].y == 0 {
+                minY = points[0].y
+                maxY = 100
+            }
+        } else if !points.isEmpty && points.count > 1 {
+            let yValues = points.map { $0.y }
+            if let min = yValues.min(), let max = yValues.max() {
+                if max == min {
+                    minY = min
+                    maxY = min * 2
+                } else {
+                    minY = min
+                    maxY = max
+                }
+            } else {
+                minY = 0
+                maxY = 100
+            }
+        }
     }
     
 }
@@ -116,8 +134,6 @@ extension GraphView {
                 .position(x: points[index].x, y:flippedY(points[index].y))
                 .onTapGesture {
                     print("positionClick\(index):\(yPosition(value: points[index].y))")
-                }.onAppear {
-                    print("position\(index):\(yPosition(value: points[index].y))")
                 }
         }
     }
@@ -182,16 +198,16 @@ extension GraphView {
                 path.addLine(to: CGPoint(x: screenWidth / 2 + 3, y: maxY))
                 path.closeSubpath()
             }
-            .fill(Color(hex: "#6B7280"))
+                .fill(Color(hex: "#6B7280"))
         )
     }
     
     func yPosition(value:CGFloat) -> CGFloat {
         guard let maxY = points.map({ $0.y }).max(),
-                 let minY = points.map({ $0.y }).min(),
-                 maxY != minY else {
-               return 0
-           }
+              let minY = points.map({ $0.y }).min(),
+              maxY != minY else {
+            return 0
+        }
         return ((value - minY) / (maxY - minY)) * 104
     }
     

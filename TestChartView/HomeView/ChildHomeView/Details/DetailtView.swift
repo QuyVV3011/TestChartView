@@ -16,8 +16,8 @@ struct DetailtView: View {
         ZStack {
             Color(hex: "F2F6FF").ignoresSafeArea()
             GeometryReader { geometry in
-                ScrollView {
-                    VStack(alignment: .leading) {
+                ScrollView(.vertical, showsIndicators: false) {
+                    VStack(alignment: .leading,spacing: 0) {
                         Spacer()
                             .frame(height: 20)
                         
@@ -29,6 +29,13 @@ struct DetailtView: View {
                                     .font(.system(size: 17, weight: .regular))
                                     .foregroundStyle(Color(hex: "F36084"))
                             }
+                            
+                            Spacer()
+                            
+                            Text("Details")
+                                .font(.system(size: 18, weight: .semibold))
+                                .foregroundStyle(Color(hex: "28303F"))
+                                .offset(x: 10)
                             
                             Spacer()
                             
@@ -47,6 +54,11 @@ struct DetailtView: View {
                             }
                         }.padding(.horizontal, 16)
                         
+                        Rectangle()
+                            .fill(Color.gray.opacity(0.5))
+                            .frame(height: 1)
+                            .padding(.top, 10)
+                        
                         HStack {
                             Text("Heart Rate")
                                 .font(.system(size: 20, weight: .bold))
@@ -60,6 +72,7 @@ struct DetailtView: View {
                                 .frame(width: 28, height: 28)
                         }
                         .padding(.horizontal, 20)
+                        .padding(.top, 25)
                         
                         HomeHeartRateView()
                             .padding(.top, 12)
@@ -67,6 +80,7 @@ struct DetailtView: View {
                             .clipShape(RoundedRectangle(cornerRadius: 20))
                             .padding(.horizontal, 20)
                             .frame(height: 353)
+                            .padding(.top, 16)
                         
                         VStack(alignment: .leading) {
                             HStack {
@@ -116,6 +130,7 @@ struct DetailtView: View {
 
                     }
                 }
+                
             }
         }
     }

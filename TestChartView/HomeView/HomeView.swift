@@ -70,6 +70,7 @@ struct HomeView: View {
             .sheet(isPresented: $showDetails) {
                 DetailtView(showDetail: $showDetails)
                     .presentationDragIndicator(.visible)
+                    .presentationCornerRadius(20)
             }
             
             HomeTabbarView(selectedHome: $selectedHome)
