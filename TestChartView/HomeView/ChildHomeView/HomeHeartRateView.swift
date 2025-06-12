@@ -2,7 +2,7 @@ import SwiftUI
 
 
 struct HomeHeartRateView: View {
-    
+    @State var points: [CGPoint] = []
     @State var currentTime: String = ""
     @State var pulseValue: Int = 75
     @State var heartScoreValue: Int = 75
@@ -64,7 +64,7 @@ struct HomeHeartRateView: View {
                 }
                 .padding(.horizontal, 12)
                 
-                GraphView()
+                GraphView5(points: $points)
                 
                 HStack {
                     Text("Measurement today : \(numberMeasurementToday)")
@@ -125,6 +125,19 @@ struct HomeHeartRateView: View {
                 updateTime()
                 days = generateCalendar(for: Calendar.current.component(.month, from: Date()), year: Calendar.current.component(.year, from: Date()))
                 print(days)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+                    points.append(CGPoint(x: 0, y: 100))
+//                    points.append(CGPoint(x: 50, y: 10))
+                    points.append(CGPoint(x: 100, y: 80))
+//                    points.append(CGPoint(x: 150, y: 20))
+                    points.append( CGPoint(x: 200, y: 50))
+                    
+                })
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+                   
+                    points.append(CGPoint(x: 250, y: 104))
+                
+                })
             }
         }
         

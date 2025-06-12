@@ -64,9 +64,24 @@ struct ScrollCusomView<Content: View>: UIViewRepresentable {
         case .pause(let offset):
             context.coordinator.pauseScroll(scrollView: scrollView, offset: offset)
         case .refresh:
-            if let hostingController = context.coordinator.hostingController {
-                hostingController.rootView = content
+            if let oldController = context.coordinator.hostingController {
+                oldController.view.removeFromSuperview()
             }
+
+            let newController = UIHostingController(rootView: content)
+            newController.view.translatesAutoresizingMaskIntoConstraints = false
+            newController.view.backgroundColor = .clear
+            scrollView.addSubview(newController.view)
+
+            NSLayoutConstraint.activate([
+                newController.view.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+                newController.view.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+                newController.view.topAnchor.constraint(equalTo: scrollView.topAnchor),
+                newController.view.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+                newController.view.heightAnchor.constraint(equalTo: scrollView.heightAnchor)
+            ])
+
+            context.coordinator.hostingController = newController
         case .reset:
             if let hostingController = context.coordinator.hostingController {
                 hostingController.rootView = content
